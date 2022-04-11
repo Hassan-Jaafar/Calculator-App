@@ -1,0 +1,357 @@
+body {
+    height: 100vh;
+    background-color: var(--main-background);
+    font-family: 'Spartan', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--main-text-color);
+    transition: .5s all ease;
+}
+
+.default {
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-keypad-background: hsl(223, 31%, 20%);
+    --result-background: hsl(224, 36%, 15%);
+    --del-res-background: hsl(225, 21%, 49%);
+    --del-res-shadow: hsl(224, 28%, 35%);
+    --equal-circle-color: hsl(6, 63%, 50%);
+    --equal-circle-shadow: hsl(6, 63%, 50%);
+    --button-background: hsl(30, 25%, 89%);
+    --button-shadow: hsl(28, 16%, 65%);
+    --main-text-color: white;
+    --keypad-text-color: hsl(221, 14%, 31%);
+}
+
+.Theme2 {
+    --main-background: hsl(0, 0%, 90%);
+    --toggle-keypad-background: hsl(0, 5%, 81%);
+    --result-background: hsl(0, 0%, 93%);
+    --del-res-background: hsl(185, 42%, 37%);
+    --del-res-shadow: hsl(185, 58%, 25%);
+    --equal-circle-color: hsl(25, 98%, 40%);
+    --equal-circle-shadow: hsl(25, 99%, 27%);
+    --button-background: hsl(45, 7%, 89%);
+    --button-shadow: hsl(35, 11%, 61%);
+    --main-text-color: hsl(60, 10%, 19%);
+    --keypad-text-color: hsl(60, 10%, 19%);
+    --diffbtns-bg-color: white;
+}
+
+.Theme3 {
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-keypad-background: hsl(268, 71%, 12%);
+    --result-background: hsl(268, 71%, 12%);
+    --del-res-background: hsl(281, 89%, 26%);
+    --del-res-shadow: hsl(285, 91%, 52%);
+    --equal-circle-color: hsl(176, 100%, 44%);
+    --equal-circle-shadow: hsl(177, 92%, 70%);
+    --button-background: hsl(268, 47%, 21%);
+    --button-shadow: hsl(290, 70%, 36%);
+    --main-text-color: hsl(52, 100%, 62%);
+    --keypad-text-color: hsl(52, 100%, 62%);
+    --diffbtns-bg-color: white;
+    --equal-text-color: hsl(198, 20%, 13%);
+}
+
+.adjustToggleNumbers {
+    /* transform: scale(0.9 ,0.9); */
+    padding-left: 350px;
+}
+
+.toggleNumbers {
+    font-weight: normal;
+    font-size: 2px;
+    width: 1rem;
+}
+
+.lastNumber {
+    padding-left: 0.3rem !important;
+}
+
+.space1 {
+    width: 17rem;
+}
+
+.space2 {
+
+    transform: scale(0.4, 0.4);
+    width: 4.5rem;
+}
+
+.space3 {
+    width: 5rem;
+    padding-top: 10px;
+}
+
+#toggleContainer {
+    position: relative;
+    border-radius: 20px;
+    height: 20px;
+    background-color: var(--toggle-keypad-background);
+}
+
+#circle {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px 22px;
+    background-color: var(--equal-circle-color);
+    /* box-shadow: 1px 1px var(--equal-circle-shadow); */
+    width: 10px;
+    height: 40px;
+    border-radius: 50%;
+    transform: scale(0.25, 0.25);
+    position: relative;
+    top: -10px;
+    left: -25px;
+    transition: .5s all ease;
+}
+
+#circle1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px 22px;
+    background-color: transparent;
+    width: 10px;
+    height: 40px;
+    border-radius: 50%;
+    transform: scale(0.25, 0.25);
+    position: absolute;
+    top: -10px;
+    left: 6px;
+    z-index: 11;
+    cursor: pointer;
+    transition: .5s all ease;
+}
+
+#circle2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 22px;
+    background-color: transparent;
+    width: 10px;
+    height: 40px;
+    border-radius: 50%;
+    transform: scale(0.25, 0.25);
+    position: absolute;
+    top: -10px;
+    z-index: 13;
+    cursor: pointer;
+    left: 25px;
+}
+
+.result {
+    display: flex;
+    justify-content: end !important;
+    align-items: center;
+    width: 26rem !important;
+    min-height: 7rem;
+    border-radius: 7px;
+    background-color: var(--result-background);
+    font-weight: 700;
+}
+
+.keyPad {
+    background-color: var(--toggle-keypad-background);
+    width: 26rem;
+    height: 27rem;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-radius: 15px;
+}
+
+button {
+    background-color: var(--button-background);
+    border: hidden;
+    box-shadow: 0px 2px var(--button-shadow);
+    width: 5.5rem;
+    padding: 0.3rem;
+    padding-top: 11px;
+    border-radius: 10px;
+    color: var(--keypad-text-color);
+}
+
+#delBtn {
+    background-color: var(--del-res-background);
+    box-shadow: 0px 2px var(--del-res-shadow);
+    color: var(--main-text-color);
+    color: var(--diffbtns-bg-color);
+    width: 5.5rem;
+    font-size: 16px;
+}
+
+#resetBtn {
+    background-color: var(--del-res-background);
+    box-shadow: 0px 2px var(--del-res-shadow);
+    color: var(--main-text-color);
+    color: var(--diffbtns-bg-color);
+    width: 85%;
+    height: 140%;
+    font-size: 16px;
+}
+
+#equalBtn {
+    background-color: var(--equal-circle-color);
+    box-shadow: 0px 2px var(--equal-circle-shadow);
+    color: var(--main-text-color);
+    color: var(--diffbtns-bg-color);
+    color: var(--equal-text-color);
+    width: 85%;
+    height: 140%;
+    font-size: 16px;
+}
+
+.colWidth {
+    display: flex;
+    justify-content: center;
+    width: 23%;
+    padding: 0 5px;
+}
+
+.row {
+    padding-bottom: 1.2rem !important;
+}
+
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+@media(max-width: 500px) {
+    .keyPad {
+        width: 21rem;
+        height: 29rem;
+    }
+
+    .result {
+        width: 21rem !important;
+        min-height: 6.5rem;
+    }
+
+    .colWidth {
+        width: 23%;
+        height: 72px;
+    }
+
+    #resetBtn {
+        width: 80%;
+        height: 150%;
+        box-shadow: 0px 4px var(--del-res-shadow);
+        /* margin-left: 20px; */
+    }
+
+    #equalBtn {
+        width: 80%;
+        height: 150%;
+        box-shadow: 0px 4px var(--equal-circle-shadow);
+        /* margin-right: 3px; */
+    }
+
+    #delBtn {
+        box-shadow: 0px 4px var(--del-res-shadow);
+    }
+
+    .adjustToggleNumbers {
+        padding-left: 280px;
+    }
+
+    .space1 {
+        width: 11.7rem;
+    }
+
+    .space2 {
+        transform: scale(0.4, 0.4);
+        width: 5.5rem;
+    }
+
+    #toggleContainer {
+        border-radius: 23px;
+        height: 23px;
+    }
+
+    #circle {
+        transform: scale(0.3, 0.3);
+        padding: 21px 22px;
+    }
+
+    #circle1 {
+        transform: scale(0.3, 0.3);
+        padding: 21px 22px;
+
+    }
+
+    #circle2 {
+        transform: scale(0.3, 0.3);
+        padding: 21px 22px;
+    }
+}
+
+@media(max-width: 355px) {
+    .keyPad {
+        width: 17rem;
+        height: auto;
+    }
+
+    .result {
+        width: 17rem !important;
+        min-height: 5.5rem;
+    }
+
+    .colWidth {
+        width: 23%;
+        height: 65px;
+    }
+
+    #resetBtn {
+        width: 80%;
+        height: 120%;
+        box-shadow: 0px 4px var(--del-res-shadow);
+        /* margin-left: 20px; */
+    }
+
+    #equalBtn {
+        width: 80%;
+        height: 120%;
+        box-shadow: 0px 4px var(--equal-circle-shadow);
+        /* margin-right: 3px; */
+    }
+
+    #delBtn {
+        box-shadow: 0px 4px var(--del-res-shadow);
+    }
+
+    .adjustToggleNumbers {
+        padding-left: 220px;
+    }
+
+    .space1 {
+        width: 8rem;
+    }
+
+    .space2 {
+        transform: scale(0.4, 0.4);
+        width: 5.5rem;
+    }
+
+    #toggleContainer {
+        border-radius: 23px;
+        height: 23px;
+    }
+
+    #circle {
+        transform: scale(0.3, 0.3);
+        padding: 21px 22px;
+    }
+
+    #circle1 {
+        transform: scale(0.3, 0.3);
+        padding: 21px 22px;
+
+    }
+
+    #circle2 {
+        transform: scale(0.3, 0.3);
+        padding: 21px 22px;
+    }
+}
